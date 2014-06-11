@@ -1,0 +1,12 @@
+<?page title="data3000"?>
+<?link rel="shortcut icon" type="image/x-icon" href="/img/data3000.ico"?>
+<?link rel="icon" type="image/x-icon" href="/img/data3000.ico"?>
+
+<zk>
+<style src="css/data3000.css"/>
+<zscript>
+	java.io.InputStream zulInput = this.getClass().getClassLoader().getResourceAsStream("com/data3000/admin/zul/index.zul") ;
+	java.io.Reader zulReader = new java.io.InputStreamReader(zulInput) ;
+	Executions.createComponentsDirectly(zulReader,"zul",null,new HashMap()) ;		
+</zscript>
+</zk>

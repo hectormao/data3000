@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!--
+	Created by ZK Studio
+-->
+
+<zk>
+	<device-config>
+		<device-type>ajax</device-type>
+		<timeout-uri>/timeout.zul</timeout-uri><!-- An empty URL can cause the browser to reload the same URL -->
+		<unavailable-message><![CDATA[
+			<p style="color:red">Lo sentimos, JavaScript debe estar habilitado </p>
+		]]></unavailable-message>>
+	</device-config>
+	
+	<system-config>
+		<disable-event-thread>false</disable-event-thread>
+		<ui-factory-class>org.zkoss.zk.ui.http.SerializableUiFactory</ui-factory-class>
+	</system-config>
+	
+	<session-config>
+		<session-timeout>18000</session-timeout>
+		<timer-keep-alive>false</timer-keep-alive>
+		<max-desktops-per-session>15</max-desktops-per-session>
+		<max-requests-per-session>5</max-requests-per-session>
+		<max-pushes-per-session>-1</max-pushes-per-session>
+		<device-type>ajax</device-type>
+		<timeout-uri>/timeout.zul</timeout-uri>
+	</session-config>
+	
+	<library-property>
+	    <name>org.zkoss.zul.Button.mold</name>
+	    <value>trendy</value>
+	</library-property>
+	
+	<preference>
+    	<name>org.zkoss.zk.ui.WebApp.name</name>
+    	<value>data3000</value>
+	</preference>
+	
+	<library-property>
+		    <name>org.zkoss.theme.preferred</name>
+		    <value>silvertail</value>
+	</library-property>
+</zk>

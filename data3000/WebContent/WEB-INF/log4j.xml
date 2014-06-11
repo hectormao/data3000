@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<log4j:configuration xmlns:log4j="http://jakarta.apache.org/log4j/">
+    
+    
+    <appender name="CONSOLE" class="org.apache.log4j.ConsoleAppender">
+        <layout class="org.apache.log4j.PatternLayout">
+           
+            <param name="ConversionPattern"
+                   value="%d{yyyy-MM-dd HH:mm:ss.SSS} - %p %C{1} | %m%n"/>
+        </layout>
+    </appender>
+    
+    
+    <!-- Log de seguimiento del liquidador de cpartes -->
+<!--     <property file="build.properties" /> -->
+<!--     <appender name="ARCHIVO" class="org.apache.log4j.RollingFileAppender"> -->
+<!-- 		<param name="File" value="C:\\archivo.log"/>  -->
+<!--         <param name="MaxFileSize" value="100Mb"/> -->
+<!--         <param name="MaxBackupIndex" value="5"/> -->
+<!--         <layout class="org.apache.log4j.PatternLayout"> -->
+<!--             <param name="ConversionPattern" -->
+<!--                    value="%d{yyyy-MM-dd HH:mm:ss.SSS} - %p %C{1} | %m%n"/> -->
+<!--         </layout> -->
+        
+<!--     </appender> -->
+<!--     <appender name="archivo2" class="org.apache.log4j.FileAppender">
+    	<param name="file" value="${catalina.base}/logs/archivo.log" />
+		<param name="file" value="file://D:/CAMILO/ONESYSTEM/apache-tomcat-7.0.42/logs/archivo.log" />
+		<param name="File" value="/logs/liquidacion/registro.log"/> 
+        <layout class="org.apache.log4j.EnhancedPatternLayout">
+            <param name="ConversionPattern" value="%d{ABSOLUTE} [%t] %-5p %c %x - %m%n" />
+        </layout>
+    </appender>
+    <appender name="archivo3" class="org.apache.log4j.FileAppender">
+    	<param name="file" value="${catalina.base}/logs/archivo.log" />
+		<param name="file" value="file://D:/CAMILO/ONESYSTEM/apache-tomcat-7.0.42/logs/archivo.log" />
+		<param name="File" value="/logs/trace/registro.log"/> 
+        <layout class="org.apache.log4j.EnhancedPatternLayout">
+            <param name="ConversionPattern" value="%d{ABSOLUTE} [%t] %-5p %c %x - %m%n" />
+        </layout>
+    </appender> -->
+    
+    <root>
+        <level value="DEBUG"/>
+        <appender-ref ref="CONSOLE"/>
+
+    </root>
+</log4j:configuration>

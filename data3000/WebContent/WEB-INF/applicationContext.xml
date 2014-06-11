@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <!-- 
+         ************************************************* 
+         *                                               *
+         *     BEANS CONFIG GENERAL SPRING + HBM         *
+         *                                               *
+         ************************************************* 
+    -->
+    
+    <bean id="dataSource" class="org.springframework.jndi.JndiObjectFactoryBean">
+		<!-- <property name="jndiName" value="jdbc/data3000" /> -->
+		<property name="jndiName" value="java:comp/env/jdbc/data3000" />
+	</bean>
+	
+	<bean id="factory" class="org.springframework.orm.hibernate4.LocalSessionFactoryBean">
+		<property name="mappingResources">
+			<list>
+				<!-- Plataforma -->
+				<value>com/data3000/admin/bd/PltFormulario.hbm.xml</value>
+				<value>com/data3000/admin/bd/PltMenu.hbm.xml</value>
+				<value>com/data3000/admin/bd/PltPermiso.hbm.xml</value>
+				<value>com/data3000/admin/bd/PltRelaForm.hbm.xml</value>
+				<value>com/data3000/admin/bd/PltRol.hbm.xml</value>
+				<value>com/data3000/admin/bd/PltUsuario.hbm.xml</value>
+				<value>com/data3000/admin/bd/PltUsuaRol.hbm.xml</value>
+				
+				<!-- Modulo documental -->
+				<value>com/data3000/data3000lib/bd/DocSistArch.hbm.xml</value>
+				<value>com/data3000/data3000lib/bd/DocArchivo.hbm.xml</value>
+				<value>com/data3000/data3000lib/bd/DocArchivoVersion.hbm.xml</value>
+				
+			</list>
+		</property>
+		<property name="hibernateProperties">
+			<props>
+				<prop key="hibernate.dialect">org.hibernate.dialect.PostgreSQLDialect</prop>
+				<prop key="hibernate.show_sql">false</prop>
+				<prop key="hibernate.transaction.factory_class">org.hibernate.transaction.JDBCTransactionFactory</prop>
+				<prop key="hibernate.current_session_context_class">thread</prop>
+				<prop key="hibernate.generate_statistics">false</prop>
+			</props>
+		</property>
+		<property name="dataSource">
+			<ref bean="dataSource" />
+		</property>
+	</bean>
+	
+	<bean id="transactionManager" class="org.springframework.orm.hibernate4.HibernateTransactionManager">
+		<property name="sessionFactory">
+			<ref bean="factory"/>
+		</property>
+	</bean>
+	
+	
+	<!-- 
+         ************************************************* 
+         *                                               *
+         *     ACCESO A DATOS (DAO)                      *
+         *                                               *
+         ************************************************* 
+    -->
+    <bean id="usuarioDAO" class="com.data3000.admin.dao.UsuarioDAO" scope="singleton">
+    	<property name="sessionFactory">
+    		<ref bean="factory"/>
+    	</property>
+    </bean>
+    
+    <bean id="plataformaDAO" class="com.data3000.admin.dao.PlataformaDAO" scope="singleton">
+    	<property name="sessionFactory">
+    		<ref bean="factory"/>
+    	</property>
+    </bean>
+    
+    <bean id="sistemaArchivoDAO" class="com.data3000.data3000lib.dao.SistemaArchivoDAO" scope="singleton">
+    	<property name="sessionFactory">
+    		<ref bean="factory"/>
+    	</property>
+    </bean>
+    
+    
+    <!-- 
+         ************************************************* 
+         *                                               *
+         *     LOGICA DE NEGOCIO (NGC)                   *
+         *                                               *
+         ************************************************* 
+    -->
+    
+    <bean id="usuarioNgc" class="com.data3000.admin.ngc.UsuarioNgcImpl" scope="singleton">
+    	<property name="usuarioDAO">
+    		<ref bean="usuarioDAO"/>
+    	</property>
+    	<property name="plataformaNgc">
+    		<ref bean="plataformaNgc"/>
+    	</property>
+    </bean>
+    
+    <bean id="plataformaNgc" class="com.data3000.admin.ngc.PlataformaNgcImpl" scope="singleton">
+    	<property name="plataformaDAO">
+    		<ref bean="plataformaDAO"/>
+    	</property>
+    </bean>
+    
+    <bean id="sistemaArchivoNgc" class="com.data3000.data3000lib.ngc.SistemaArchivoNgcImpl" scope="singleton" >
+    	<property name="sistemaArchivoDAO">
+    		<ref bean="sistemaArchivoDAO"/>
+    	</property>
+    </bean>
+	
+
+    <!-- 
+         ************************************************* 
+         *                                               *
+         *     CONTROLADORES DE LAS VENTANAS (CNT)       *
+         *                                               *
+         ************************************************* 
+    -->
+    <bean id="indexCnt" class="com.data3000.admin.cnt.IndexCnt" scope="prototype">
+    	<property name="plataformaNgc">
+    		<ref bean="plataformaNgc"/>
+    	</property>      
+    </bean>
+    
+    <bean id="accesoCnt" class="com.data3000.admin.cnt.AccesoCnt" scope="prototype">
+    	<property name="usuarioNgc">
+    		<ref bean="usuarioNgc"/>
+    	</property>      
+    </bean>
+    
+    <bean id="tablaDatosCnt" class="com.data3000.admin.cnt.TablaDatosCnt" scope="prototype">
+		<property name="plataformaNgc">
+			<ref bean="plataformaNgc"/>
+		</property>
+	</bean>
+    
+    
+	<bean id="escritorioCnt" class="com.data3000.data3000lib.cnt.EscritorioCnt" scope="prototype">
+		<property name="sistemaArchivoNgc">
+			<ref bean="sistemaArchivoNgc"/>
+		</property>
+	</bean>    
+
+</beans>
