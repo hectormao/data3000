@@ -32,6 +32,10 @@
 				<value>com/data3000/data3000lib/bd/DocSistArch.hbm.xml</value>
 				<value>com/data3000/data3000lib/bd/DocArchivo.hbm.xml</value>
 				<value>com/data3000/data3000lib/bd/DocArchivoVersion.hbm.xml</value>
+				<value>com/data3000/data3000lib/bd/DocCampTipo.hbm.xml</value>
+				<value>com/data3000/data3000lib/bd/DocCampo.hbm.xml</value>
+				<value>com/data3000/data3000lib/bd/DocTipoArchivo.hbm.xml</value>
+				<value>com/data3000/data3000lib/bd/DocCampArch.hbm.xml</value>
 				
 			</list>
 		</property>
