@@ -149,6 +149,9 @@
 	</bean>  
 	
 	<bean id="tipoDocumentoCnt" class="com.data3000.data3000lib.cnt.TipoDocumentoCnt" scope="prototype">
+		<property name="sistemaArchivoNgc">
+			<ref bean="sistemaArchivoNgc"/>
+		</property>
 	</bean>    
 
 </beans>
