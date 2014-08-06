@@ -152,6 +152,12 @@
 		<property name="sistemaArchivoNgc">
 			<ref bean="sistemaArchivoNgc"/>
 		</property>
-	</bean>    
+	</bean>
+	
+	<bean id="usuarioCnt" class="com.data3000.admin.cnt.UsuarioCnt" scope="prototype">
+		<property name="usuarioNgc">
+    		<ref bean="usuarioNgc"/>
+    	</property>    
+	</bean>       
 
 </beans>
