@@ -27,6 +27,7 @@
 				<value>com/data3000/admin/bd/PltRol.hbm.xml</value>
 				<value>com/data3000/admin/bd/PltUsuario.hbm.xml</value>
 				<value>com/data3000/admin/bd/PltUsuaRol.hbm.xml</value>
+				<value>com/data3000/admin/bd/PltEnv.hbm.xml</value>
 				
 				<!-- Modulo documental -->
 				<value>com/data3000/data3000lib/bd/DocSistArch.hbm.xml</value>
@@ -113,6 +114,9 @@
     	<property name="sistemaArchivoDAO">
     		<ref bean="sistemaArchivoDAO"/>
     	</property>
+    	<property name="plataformaNgc">
+    		<ref bean="plataformaNgc"/>
+    	</property>
     </bean>
 	
 
@@ -146,12 +150,21 @@
 		<property name="sistemaArchivoNgc">
 			<ref bean="sistemaArchivoNgc"/>
 		</property>
+		<property name="plataformaNgc">
+			<ref bean="plataformaNgc"/>
+		</property>
 	</bean>  
 	
 	<bean id="tipoDocumentoCnt" class="com.data3000.data3000lib.cnt.TipoDocumentoCnt" scope="prototype">
 		<property name="sistemaArchivoNgc">
 			<ref bean="sistemaArchivoNgc"/>
 		</property>
-	</bean>    
+	</bean>
+	
+	<bean id="cargarArchivoCnt" class="com.data3000.data3000lib.cnt.CargarArchivoCnt" scope="prototype">
+		<property name="sistemaArchivoNgc">
+			<ref bean="sistemaArchivoNgc"/>
+		</property>
+	</bean>      
 
 </beans>
