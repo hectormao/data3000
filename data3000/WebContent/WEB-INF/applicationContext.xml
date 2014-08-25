@@ -28,6 +28,7 @@
 				<value>com/data3000/admin/bd/PltUsuario.hbm.xml</value>
 				<value>com/data3000/admin/bd/PltUsuaRol.hbm.xml</value>
 				<value>com/data3000/admin/bd/PltEnv.hbm.xml</value>
+				<value>com/data3000/admin/bd/PltFormAtri.hbm.xml</value>
 				
 				<!-- Modulo documental -->
 				<value>com/data3000/data3000lib/bd/DocSistArch.hbm.xml</value>
@@ -37,6 +38,7 @@
 				<value>com/data3000/data3000lib/bd/DocCampo.hbm.xml</value>
 				<value>com/data3000/data3000lib/bd/DocTipoArchivo.hbm.xml</value>
 				<value>com/data3000/data3000lib/bd/DocCampArch.hbm.xml</value>
+				
 				
 			</list>
 		</property>
