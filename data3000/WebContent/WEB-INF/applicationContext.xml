@@ -12,7 +12,9 @@
     -->
     
     <bean id="dataSource" class="org.springframework.jndi.JndiObjectFactoryBean">
+    <!-- GLASSFISH -->
 <!-- 		<property name="jndiName" value="jdbc/data3000" /> -->
+	<!-- TOMCAT -->
 		<property name="jndiName" value="java:comp/env/jdbc/data3000" /> 
 	</bean>
 	
@@ -38,7 +40,7 @@
 				<value>com/data3000/data3000lib/bd/DocCampo.hbm.xml</value>
 				<value>com/data3000/data3000lib/bd/DocTipoArchivo.hbm.xml</value>
 				<value>com/data3000/data3000lib/bd/DocCampArch.hbm.xml</value>
-				
+				<value>com/data3000/data3000lib/bd/DocAcl.hbm.xml</value>
 				
 			</list>
 		</property>
@@ -168,7 +170,23 @@
 		<property name="sistemaArchivoNgc">
 			<ref bean="sistemaArchivoNgc"/>
 		</property>
-	</bean>      
+	</bean>  
+	
+	<bean id="directorioCnt" class="com.data3000.data3000lib.cnt.DirectorioCnt" scope="prototype">
+		<property name="plataformaNgc">
+			<ref bean="plataformaNgc"/>
+		</property>
+		
+		<property name="usuarioNgc">
+			<ref bean="usuarioNgc"/>
+		</property>
+		
+		<property name="sistemaArchivoNgc">
+			<ref bean="sistemaArchivoNgc"/>
+		</property>
+		
+	</bean>  
+	    
 
 	<bean id="usuarioCnt" class="com.data3000.admin.cnt.UsuarioCnt" scope="prototype">
 		<property name="usuarioNgc">
