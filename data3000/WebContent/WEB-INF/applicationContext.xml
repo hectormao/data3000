@@ -170,6 +170,12 @@
 		<property name="sistemaArchivoNgc">
 			<ref bean="sistemaArchivoNgc"/>
 		</property>
+		<property name="plataformaNgc">
+			<ref bean="plataformaNgc"/>
+		</property>
+		<property name="usuarioNgc">
+			<ref bean="usuarioNgc"/>
+		</property>
 	</bean>  
 	
 	<bean id="directorioCnt" class="com.data3000.data3000lib.cnt.DirectorioCnt" scope="prototype">
