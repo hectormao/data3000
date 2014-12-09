@@ -39,3 +39,7 @@
 	border-top-style: solid;
 	border-top-width: 1px;
 }
+
+.columna-arbol tbody tr td table {
+	width: 100%;
+}
