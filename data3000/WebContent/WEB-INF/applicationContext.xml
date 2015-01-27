@@ -51,6 +51,7 @@
 				<prop key="hibernate.transaction.factory_class">org.hibernate.transaction.JDBCTransactionFactory</prop>
 				<prop key="hibernate.current_session_context_class">thread</prop>
 				<prop key="hibernate.generate_statistics">false</prop>
+				
 			</props>
 		</property>
 		<property name="dataSource">
