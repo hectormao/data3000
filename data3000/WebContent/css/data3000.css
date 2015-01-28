@@ -43,3 +43,12 @@
 .columna-arbol tbody tr td table {
 	width: 100%;
 }
+
+.columna-boton {
+	padding: 0px;
+	width: 28px;
+}
+
+.columna-boton .z-listcell-content{
+	padding: 0px;	
+}
