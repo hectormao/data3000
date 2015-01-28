@@ -197,6 +197,15 @@
 	<bean id="usuarioCnt" class="com.data3000.admin.cnt.UsuarioCnt" scope="prototype">
 		<property name="usuarioNgc">
     		<ref bean="usuarioNgc"/>
+    	</property>
+    	<property name="plataformaNgc">
+    		<ref bean="plataformaNgc"/>
+    	</property>    
+	</bean>
+	
+	<bean id="rolPermisosCnt" class="com.data3000.admin.cnt.RolPermisosCnt" scope="prototype">
+		<property name="plataformaNgc">
+    		<ref bean="plataformaNgc"/>
     	</property>    
 	</bean>       
 
