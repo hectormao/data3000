@@ -52,3 +52,14 @@
 .columna-boton .z-listcell-content{
 	padding: 0px;	
 }
+
+.check-sianulado{
+	position: absolute;
+	right: 0px;
+	top: 12px;
+}
+
+.registro-anulado .z-listcell-content{
+	font-style: italic;
+	color: gray;
+}
