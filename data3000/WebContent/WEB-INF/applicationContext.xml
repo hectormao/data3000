@@ -13,9 +13,9 @@
     
     <bean id="dataSource" class="org.springframework.jndi.JndiObjectFactoryBean">
     <!-- GLASSFISH -->
-<!-- 		<property name="jndiName" value="jdbc/data3000" /> -->
+		<property name="jndiName" value="jdbc/data3000" />
 	<!-- TOMCAT -->
-		<property name="jndiName" value="java:comp/env/jdbc/data3000" /> 
+<!-- 		<property name="jndiName" value="java:comp/env/jdbc/data3000" />  -->
 	</bean>
 	
 	<bean id="factory" class="org.springframework.orm.hibernate4.LocalSessionFactoryBean">
@@ -208,7 +208,14 @@
 		<property name="plataformaNgc">
     		<ref bean="plataformaNgc"/>
     	</property>    
-	</bean>       
+	</bean>
+	
+	<bean id="copiarCnt" class="com.data3000.data3000lib.cnt.CopiarCnt" scope="prototype">
+		<property name="sistemaArchivoNgc">
+			<ref bean="sistemaArchivoNgc"/>
+		</property>
+		
+	</bean>      
 
 
 </beans>
