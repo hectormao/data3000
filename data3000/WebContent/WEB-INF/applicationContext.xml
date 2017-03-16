@@ -144,13 +144,14 @@
     <bean id="accesoCnt" class="com.data3000.admin.cnt.AccesoCnt" scope="prototype">
     	<property name="usuarioNgc">
     		<ref bean="usuarioNgc"/>
-    	</property>      
+    	</property>     
     </bean>
     
     <bean id="tablaDatosCnt" class="com.data3000.admin.cnt.TablaDatosCnt" scope="prototype">
 		<property name="plataformaNgc">
 			<ref bean="plataformaNgc"/>
 		</property>
+		
 	</bean>
     
     
@@ -166,6 +167,9 @@
 	<bean id="tipoDocumentoCnt" class="com.data3000.data3000lib.cnt.TipoDocumentoCnt" scope="prototype">
 		<property name="sistemaArchivoNgc">
 			<ref bean="sistemaArchivoNgc"/>
+		</property>
+		<property name="plataformaNgc">
+			<ref bean="plataformaNgc"/>
 		</property>
 	</bean>
 	
@@ -217,10 +221,24 @@
 		<property name="sistemaArchivoNgc">
 			<ref bean="sistemaArchivoNgc"/>
 		</property>
-		
+		<property name="plataformaNgc">
+    		<ref bean="plataformaNgc"/>
+    	</property>
 	</bean>      
 	
 	<bean id="verArchivoCnt" class="com.data3000.data3000lib.cnt.VerArchivoCnt" scope="prototype">
-	</bean>  
+		<property name="plataformaNgc">
+    		<ref bean="plataformaNgc"/>
+    	</property>
+	</bean> 
+	
+	<bean id="serieDocumentalCnt" class="com.data3000.data3000lib.cnt.SerieDocumentalCnt" scope="prototype">
+		<property name="sistemaArchivoNgc">
+			<ref bean="sistemaArchivoNgc"/>
+		</property>
+		<property name="plataformaNgc">
+			<ref bean="plataformaNgc"/>
+		</property>
+	</bean>   
 
 </beans>
