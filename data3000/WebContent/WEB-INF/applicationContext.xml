@@ -222,5 +222,12 @@
 	
 	<bean id="verArchivoCnt" class="com.data3000.data3000lib.cnt.VerArchivoCnt" scope="prototype">
 	</bean>  
+	
+	<bean id="tomarDecision" class="com.data3000.data3000lib.cnt.decisionCnt" scope="prototype">
+		<property name="plataformaNgc">
+			<ref bean="plataformaNgc"/>
+		</property>
+		
+	</bean>  
 
 </beans>
