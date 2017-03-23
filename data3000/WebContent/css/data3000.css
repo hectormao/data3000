@@ -63,3 +63,8 @@
 	font-style: italic;
 	color: gray;
 }
+
+.grupoInterno>.z-groupbox-header {
+	width : 0px;
+	height: 10px;
+}
