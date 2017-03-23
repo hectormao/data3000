@@ -241,6 +241,37 @@
 		</property>
 	</bean>   
 	
+	
+		<bean id="entidadCnt" class="com.data3000.data3000lib.cnt.EntidadCnt" scope="prototype">
+		<property name="plataformaNgc">
+			<ref bean="plataformaNgc"/>
+		</property>
+		
+		<property name="usuarioNgc">
+			<ref bean="usuarioNgc"/>
+		</property>
+		
+		<property name="sistemaArchivoNgc">
+			<ref bean="sistemaArchivoNgc"/>
+		</property>
+		
+	</bean>  
+	
+		<bean id="dependenciaCnt" class="com.data3000.data3000lib.cnt.DependenciaCnt" scope="prototype">
+		<property name="plataformaNgc">
+			<ref bean="plataformaNgc"/>
+		</property>
+		
+		<property name="usuarioNgc">
+			<ref bean="usuarioNgc"/>
+		</property>
+		
+		<property name="sistemaArchivoNgc">
+			<ref bean="sistemaArchivoNgc"/>
+		</property>
+		
+	</bean>  
+	
 	<bean id="tomarDecision" class="com.data3000.data3000lib.cnt.decisionCnt" scope="prototype">
 		<property name="plataformaNgc">
 			<ref bean="plataformaNgc"/>
