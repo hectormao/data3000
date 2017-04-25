@@ -1,0 +1,103 @@
+/*estilos del menu*/
+*{
+	text-shadow: none;
+}
+
+/*estilos texto ====================================*/
+
+span{
+	text-shadow: none;
+}
+.z-menu-text{
+	color: white;
+	font-size: 13px;
+	text-shadow: none;
+}
+
+.z-menuitem-text{
+	color: white;
+	font-size: 13px;
+	text-shadow: none;
+}
+
+.z-toolbarbutton-content{
+	color: white;
+	font-size: 13px;
+	text-shadow: none;
+}
+
+.z-button{
+	text-shadow: none;
+}
+/*====================================================*/
+
+
+.z-menubar{
+	background: #211915;
+}
+
+
+
+/* estilos de los items del menu */ 
+.z-menu-content:hover{
+	background: #3a2f2a;
+	border-color: #3a2f2a;
+}
+.z-menu-content:FOCUS{
+	background: #3a2f2a;
+	border-color: #3a2f2a;
+}
+.z-menuitem{
+	background: #3a2f2a;
+	border-color: #3a2f2a;
+}
+.z-menuitem-content:hover{
+	background: #3a2f2a;
+	border-color: #3a2f2a;
+}
+.z-menupopup{
+	background: #3a2f2a;
+	border-color: #3a2f2a;
+}
+
+.z-menu-selected>.z-menu-content{
+	background: #3a2f2a;
+	border-color: #3a2f2a;
+}
+
+.z-treecol{
+	background: #545454;
+}
+
+/*estilos radio button*/
+.z-treerow-checkable{
+	background: #545454;
+}
+
+/*estilos menu secundario*/
+
+.menuSecundario{
+	background: #545454;
+}
+
+.menuDesplegable{
+		background: #545454;
+}
+.menuDesplegable:HOVER{
+		background: #545454;
+}
+
+.contenedorItems{
+			background: #545454;
+}
+
+.z-toolbar{
+	background: #211915;
+}
+
+/*tabs*/
+.z-tabs{
+	background: #545454;
+}
+
+
