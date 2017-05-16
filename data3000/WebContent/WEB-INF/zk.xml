@@ -39,17 +39,7 @@
 	</preference>
 	
 	<library-property>
-	    <name>org.zkoss.theme.preferred</name>
-	    <value>breeze</value> 
-    </library-property>
-    
-    <library-property>
-		    <name>org.zkoss.theme.preferred</name>
-		    <value>data3000</value>
-	</library-property>
-	
-<!-- 	<library-property> -->
-<!-- 		    <name>org.zkoss.theme.preferred</name> -->
-<!-- 		    <value>silvertail</value> -->
-<!-- 	</library-property> -->
+    <name>org.zkoss.theme.preferred</name>
+    <value>codex</value> 
+</library-property>
 </zk>

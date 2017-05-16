@@ -4,7 +4,7 @@
 
 <zk>
 <style src="css/data3000.css"/>
-<style src="css/estilosData3000.css"/>
+<!--  <style src="css/estilosData3000.css"/> -->
 <zscript>
 	java.io.InputStream zulInput = this.getClass().getClassLoader().getResourceAsStream("com/data3000/admin/zul/index.zul") ;
 	java.io.Reader zulReader = new java.io.InputStreamReader(zulInput) ;

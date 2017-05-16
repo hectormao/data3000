@@ -1,6 +1,12 @@
 
+.z-treerow-radio{
+	
+	
+}
+
 .z-tabbox-detalle .z-tabs-content{
-	border-bottom: 1px solid #cfcfcf;
+	
+	background-color: #FFFFFF;
 	border-top: 0;
 }
 .z-tabbox-detalle .z-tabpanel{
@@ -57,7 +63,7 @@
 	position: absolute;
 	right: 0px;
 	top: 12px;
-	color: white;
+	color: #000000;
 }
 
 .registro-anulado .z-listcell-content{
@@ -68,4 +74,76 @@
 .grupoInterno>.z-groupbox-header {
 	width : 0px;
 	height: 10px;
+}
+
+/*estilos radio button*/
+.z-treerow-checkable{
+	background: #FFFFFF;
+}
+
+.z-treecol-content{
+	background: #FFFFFF;	
+}
+
+.menuapp{
+	border: 0;
+	padding: 0;
+	margin: 0;
+	background-color: #000000;
+	height: 100%;
+	
+}
+
+
+.menuBar{
+	border: 0;
+	padding: 0;
+	margin: 0;
+}
+
+
+.toolUsuario {
+	
+	background-color: #FFFFFF !important;	
+	height: 100%;
+	border : none;
+}
+
+.toolUsuario>.z-toolbar-content>.z-toolbarbutton>.z-toolbarbutton-content{
+	color : #000000 !important;
+}
+
+.z-toolbar{
+	background: #211915;
+}
+
+
+.menuTablaDato{
+	background: #FFFFFF;
+	border : none;
+}
+
+.menuSecundario{
+	background: #FFFFFF !important;
+	border : none;
+}
+
+.menuDesplegable{
+		background: #FFFFFF;
+}
+.menuDesplegable:HOVER{
+		background: #FFFFFF;
+}
+
+.contenedorItems{
+			background: #FFFFFF;
+}
+
+.menuDesplegable .z-menu .z-menu-hover {
+	background: #FFFFFF;
+}
+
+/*tabs*/
+.z-tabs{
+	background: #FFFFFF;
 }
