@@ -8,7 +8,7 @@
        <dependent-module archiveName="data3000lib.jar" deploy-path="/WEB-INF/lib" handle="module:/resource/data3000lib/data3000lib">
            <dependency-type>uses</dependency-type>
        </dependent-module>
-       <property name="context-root" value="data3000"/>
        <property name="java-output-path" value="/data3000/build/classes"/>
+        <property name="context-root" value="codex"/>
    </wb-module>
 </project-modules>

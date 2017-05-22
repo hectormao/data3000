@@ -89,9 +89,17 @@
 	border: 0;
 	padding: 0;
 	margin: 0;
-	background-color: #000000;
 	height: 100%;
 	
+}
+
+.submenu>.z-treecell>.z-treecell-content>.z-treecell-text {
+	font-size: 14px;
+	font-weight: bold;
+}
+
+.z-listbox-body>table {
+	border-bottom: 1px solid;
 }
 
 
@@ -107,6 +115,7 @@
 	background-color: #FFFFFF !important;	
 	height: 100%;
 	border : none;
+	float: right;
 }
 
 .toolUsuario>.z-toolbar-content>.z-toolbarbutton>.z-toolbarbutton-content{
