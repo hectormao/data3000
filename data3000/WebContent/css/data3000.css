@@ -1,3 +1,29 @@
+body {
+	padding: 0px;
+}
+
+.z-window-content {
+	padding: 0px;
+}
+
+.z-tree {
+	border : 0;
+}
+
+.z-west-splitter {
+	border-left : 1px solid #000;
+	border-right : 1px solid #000;
+}
+
+
+.z-tabbox-bottom>.z-tabs .z-tabs-content {
+    border-top: 0;
+    border-bottom: 0;
+}
+
+.z-tabbox-bottom>.z-tabpanels>.z-tabpanel {
+    border: 0;
+}
 
 .z-treerow-radio{
 	
@@ -93,6 +119,12 @@
 	
 }
 
+a.menuapp:hover{
+background: none;
+border: 1px solid;
+border-color: #FFFFFF; 
+}
+
 .submenu>.z-treecell>.z-treecell-content>.z-treecell-text {
 	font-size: 14px;
 	font-weight: bold;
@@ -112,14 +144,18 @@
 
 .toolUsuario {
 	
-	background-color: #FFFFFF !important;	
+	background-color: #3fb618 !important;	
 	height: 100%;
 	border : none;
 	float: right;
 }
 
+
+
 .toolUsuario>.z-toolbar-content>.z-toolbarbutton>.z-toolbarbutton-content{
-	color : #000000 !important;
+	color: #FFFFFF !important;
+    text-shadow: 0 0px #fff;
+    font-style: normal;
 }
 
 .z-toolbar{
@@ -151,6 +187,16 @@
 .menuDesplegable .z-menu .z-menu-hover {
 	background: #FFFFFF;
 }
+
+.areaTrabajo {
+	margin-left: 5px;
+}
+
+
+.encabezadoPrincipal {
+	background-color: #3fb618;	
+}
+
 
 /*tabs*/
 .z-tabs{

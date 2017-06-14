@@ -16,6 +16,7 @@
 	<system-config>
 		<disable-event-thread>false</disable-event-thread>
 		<ui-factory-class>org.zkoss.zk.ui.http.SerializableUiFactory</ui-factory-class>
+		<max-upload-size>20480</max-upload-size>
 	</system-config>
 	
 	<session-config>
